@@ -1,0 +1,222 @@
+@import '@/assets/Colors/dark.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Lugrasimo&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    transition: 0.2s linear;
+}
+
+body {
+    overflow-y: hidden;
+    font-family: "Montserrat", sans-serif;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+ul {
+    list-style: none;
+}
+
+.text-color {
+    color: var(--main-font-Color);
+}
+
+.main-color {
+    color: var(--main-Color);
+}
+
+.description-color {
+    color: var(--description-Color);
+}
+
+.box-effect {
+    width: 180px;
+}
+
+h6.line-effect::before {
+    content: "";
+    position: absolute;
+    width: 85px;
+    height: 2px;
+    background-color: var(--main-font-Color);
+    right: 90px;
+    top: 8px;
+}
+
+.slide-up-enter-active,
+.slide-up-leave-active {
+    transition: transform 0.5s ease-out;
+}
+
+.slide-up-enter,
+.slide-up-leave-to {
+    transform: translateY(100%);
+}
+
+/* تأثير الصفحة "Home" (تظهر من الجنب) */
+.slide-left-enter-active,
+.slide-left-leave-active {
+    transition: transform 0.5s ease-out;
+}
+
+.slide-left-enter,
+.slide-left-leave-to {
+    transform: translateX(-100%);
+}
+
+.slide-right-enter-active,
+.slide-right-leave-active {
+    transition: transform 0.5s ease-out;
+}
+
+.slide-right-enter {
+    transform: translateX(-100%);
+    /* تبدأ من جهة اليسار */
+}
+
+.slide-right-leave-to {
+    transform: translateX(100%);
+    /* تخرج إلى اليمين */
+}
+
+.slide-down-enter-active,
+.slide-down-leave-active {
+    transition: transform 0.5s ease-out;
+}
+
+.slide-down-enter {
+    transform: translateY(-100%);
+    /* تبدأ من الأعلى */
+}
+
+.slide-down-leave-to {
+    transform: translateY(100%);
+    /* تخرج إلى الأسفل */
+}
+
+.custom-btn {
+    background-color: var(--main-Color);
+    width: 150px;
+    padding: 13px;
+    border-radius: 2px;
+    border: none;
+}
+
+input,
+textarea {
+    color: var(--main-font-Color);
+}
+
+input:focus-visible,
+textarea {
+
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    background-color: rgba(255, 255, 255, .2) !important;
+}
+
+.swiper {
+    width: 300px;
+    height: 300px;
+    padding: 50px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    background-color: var(--body-Color);
+    width: 6px;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-Color);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.page-title {
+    -webkit-text-fill-color: #0000;
+    background: #8c57f7;
+    background: linear-gradient(7deg, var(--main-Color) 26%, #ffffff 125%, #a89bbf);
+    -webkit-background-clip: text;
+    font-weight: 700;
+    font-size: 50px;
+
+}
+
+table.custom-table thead th {
+    background-color: var(--secondary-Color);
+    color: var(--main-font-Color);
+
+}
+
+th.fit-content {
+    width: 40px;
+    text-align: center;
+}
+
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+    border: 1px solid #2b2b2a !important;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+    color: var(--main-font-Color);
+    --bs-table-bg-type: #121212 !important;
+}
+
+.table>:not(caption)>*>* {
+    padding: .5rem .5rem;
+    color: var(--main-font-Color) !important;
+    background-color: var(--secondary-Color) !important;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.modal-header {
+    justify-content: space-between;
+}
+
+.modal-content {
+    background-color: var(--secondary-Color) !important;
+    color: var(--main-font-Color) !important;
+}
+
+
+input.custom-btn {
+    background-color: var(--body-Color);
+    border: none;
+    padding: 10px;
+    color: var(--main-font-Color) !important;
+}
+input.custom-btn::placeholder {
+    color: var(--main-Color) !important;
+}
+input.custom-btn:focus {
+    background-color: var(--body-Color) !important;
+    box-shadow: none;
+}
